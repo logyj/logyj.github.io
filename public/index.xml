@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Logyj</title>
+    <link>https://logyj.github.io/</link>
+    <description>Recent content on Logyj</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 Jan 2024 17:20:20 +0800</lastBuildDate>
+    <atom:link href="https://logyj.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>20240116</title>
+      <link>https://logyj.github.io/docs/20240116/</link>
+      <pubDate>Tue, 16 Jan 2024 17:20:20 +0800</pubDate>
+      <guid>https://logyj.github.io/docs/20240116/</guid>
+      <description>Hello!</description>
+    </item>
+  </channel>
+</rss>
