@@ -1,0 +1,4 @@
+baseURL = 'https://logyj.github.io/'
+languageCode = 'en-us'
+title = 'Logyj'
+theme = "PaperMod"
