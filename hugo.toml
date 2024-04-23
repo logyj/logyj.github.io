@@ -1,0 +1,44 @@
+baseURL = 'https://logyj.github.io/'
+languageCode = 'zh-cn'
+title = '🏔穷山距海🚣‍♂️'
+theme = "PaperMod"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[menu]
+
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories/"
+    weight = 30
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 40
+
+  [[menu.main]]
+    identifier = "archive"
+    name = "Archive"
+    url = "/archive/"
+    weight = 50
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 60
+
+[params.homeInfoParams]
+  Title = "志之所趋无远弗届 穷山距海不能限也"
+  Content = "👋 把心中的不悦全部放在这里，带着愉悦的心情回去！😁"
