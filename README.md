@@ -1,1 +1,0 @@
-# logyj.github.io
