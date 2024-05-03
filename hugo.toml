@@ -53,7 +53,7 @@ theme = "PaperMod"
   ShowToc = true
   TocOpen = true
 #  ShowPostNavLinks = true
-#  ShowAllPagesInArchive = true
+  ShowAllPagesInArchive = true
 #  ShowPageNums = true
 
 [outputs]
