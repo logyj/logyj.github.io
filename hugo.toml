@@ -53,8 +53,8 @@ theme = "PaperMod"
   ShowToc = true
   TocOpen = true
 #  ShowPostNavLinks = true
-  ShowAllPagesInArchive = true
-#  ShowPageNums = true
+  ShowAllPagesInArchive = true  #显示所有博客在Archive页面包括About Me页
+  ShowPageNums = true
 
 [outputs]
   home = [ "HTML", "RSS", "JSON" ]
