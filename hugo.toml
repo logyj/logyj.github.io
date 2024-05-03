@@ -52,7 +52,7 @@ theme = "PaperMod"
 [params]
   ShowToc = true
   TocOpen = true
-#  ShowPostNavLinks = true
+  ShowPostNavLinks = true   #在博客页面底部显示前后博客链接
   ShowAllPagesInArchive = true  #显示所有博客在Archive页面包括About Me页
   ShowPageNums = true
 
