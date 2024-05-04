@@ -61,31 +61,6 @@ defaultContentLanguage = "zh"
   comments = false   #评论设置打开后，部署网页没有显示所以关闭
   ShowWordCount = false #博客字数统计打开后，部署网页字数显示错误所以关闭
 
-[params.profileMode]
-  enabled = true
-  title = "<Title>"
-  subtitle = "This is subtitle"
-  imageUrl = "<image link>"
-  imageTitle = "<title of image as alt>"
-  imageWidth = 120
-  imageHeight = 120
-
-[[params.profileMode.buttons]]
-  name = "Archive"
-  url = "/archive"
-
-[[params.profileMode.buttons]]
-  name = "Github"
-  url = "https://github.com/"
-
-[[params.socialIcons]]
-  name = "<platform>"
-  url = "<link>"
-
-[[params.socialIcons]]
-  name = "<platform 2>"
-  url = "<link2>"
-  
 [params.homeInfoParams]
   Title = "志之所趋无远弗届 穷山距海不能限也"
   Content = "👋 把心中不悦全部放这里，带回愉悦的心情去奋斗！为了老婆和儿子一定要努力奋斗！把不好的一切全部留在这里！感谢这个垃圾场！😁"
