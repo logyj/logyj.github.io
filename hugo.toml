@@ -72,12 +72,12 @@ defaultContentLanguage = "zh"
   imageHeight = 360
 
 [[params.profileMode.buttons]]
-  name = "Archive"
-  url = "/archive/"
-
-[[params.profileMode.buttons]]
   name = "Posts"
   url = "/posts/"
+
+[[params.profileMode.buttons]]
+  name = "Archive"
+  url = "/archive/"
 
 #[[params.socialIcons]]   #简介模式下主页上按钮上方的社交链接
 #  name = "<platform>"
