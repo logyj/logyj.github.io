@@ -3,7 +3,6 @@ title = "About Me"
 date = 2024-04-17T16:12:20+08:00
 author = "Pavel"
 slug = "about"
-
 +++
 
 ## 记录意见
