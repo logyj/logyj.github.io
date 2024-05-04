@@ -2,12 +2,19 @@ baseURL = 'https://logyj.github.io/'
 languageCode = 'zh-cn'
 title = '🏔穷山距海🚣‍♂️'
 theme = "PaperMod"
+defaultContentLanguage = "zh"
 
 [taxonomies]
   tag = "tags"
   category = "categories"
 
 [menu]
+
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 10
 
   [[menu.main]]
     identifier = "posts"
