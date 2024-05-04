@@ -68,8 +68,8 @@ defaultContentLanguage = "zh"
   subtitle = "👋 把心中不悦全部放这里，带回愉悦的心情去奋斗！为了自己和家人一定要努力奋斗！把不好的一切全部留在这里！感谢这个垃圾场！😁"
   imageUrl = "/img/homeimage.jpg"
   imageTitle = ""  #图片信息不显示
-  imageWidth = 120   #在主页正中间显示的圆形图像
-  imageHeight = 120
+  imageWidth = 200   #在主页正中间显示的圆形图像
+  imageHeight = 200
 
 [[params.profileMode.buttons]]
   name = "Archive"
