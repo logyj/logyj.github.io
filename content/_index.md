@@ -4,8 +4,8 @@ date = 2024-04-17T16:12:20+08:00
 draft = false
 +++
 
-## Welcome to My Blog
+## 志之所趋无远弗届 穷山距海不能限也
 
-Welcome to my blog! Here you'll find interesting articles about various topics.
+👋 把心中不悦全部放这里，带回愉悦的心情去奋斗！为了老婆和儿子一定要努力奋斗！把不好的一切全部留在这里！感谢这个垃圾场！😁
 
-Check out the latest blog posts:
+好
