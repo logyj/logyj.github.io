@@ -66,8 +66,8 @@ defaultContentLanguage = "zh"
   enabled = true
   title = "志之所趋无远弗届 穷山距海不能限也"
   subtitle = "👋 把心中不悦全部放这里，带回愉悦的心情去奋斗！为了自己和家人一定要努力奋斗！把不好的一切全部留在这里！感谢这个垃圾场！😁"
-  imageUrl = "<image link>"
-  imageTitle = "<title of image as alt>"
+  imageUrl = "/img/homeimage.jpg"
+  imageTitle = "homeimage"
   imageWidth = 120
   imageHeight = 120
 
