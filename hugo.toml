@@ -45,16 +45,16 @@ theme = "PaperMod"
     url = "/about/"
     weight = 60
 
+[params]
+  ShowToc = true  #显示博客页的目录
+  TocOpen = true   #默认打开博客页的目录
+  ShowPostNavLinks = true   #在博客页面底部显示前后博客链接
+  ShowAllPagesInArchive = true  #显示所有页面在Archive页面包括About Me页
+  ShowPageNums = true  #在博客文章列表中是否显示页码
+
 [params.homeInfoParams]
   Title = "志之所趋无远弗届 穷山距海不能限也"
   Content = "👋 把心中不悦全部放这里，带回愉悦的心情去奋斗！为了老婆和儿子一定要努力奋斗！把不好的一切全部留在这里！感谢这个垃圾场！😁"
-
-[params]
-  ShowToc = true
-  TocOpen = true
-  ShowPostNavLinks = true   #在博客页面底部显示前后博客链接
-  ShowAllPagesInArchive = true  #显示所有博客在Archive页面包括About Me页
-  ShowPageNums = true
 
 [outputs]
   home = [ "HTML", "RSS", "JSON" ]
