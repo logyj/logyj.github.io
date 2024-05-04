@@ -51,6 +51,8 @@ theme = "PaperMod"
   ShowPostNavLinks = true   #在博客页面底部显示前后博客链接
   ShowAllPagesInArchive = true  #显示所有页面在Archive页面包括About Me页
   ShowPageNums = true  #在博客文章列表中是否显示页码
+  comments = true
+  ShowWordCount = true
 
 [params.homeInfoParams]
   Title = "志之所趋无远弗届 穷山距海不能限也"
