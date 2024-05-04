@@ -67,8 +67,8 @@ defaultContentLanguage = "zh"
   title = "志之所趋无远弗届 穷山距海不能限也"
   subtitle = "👋 把心中不悦全部放这里，带回愉悦的心情去奋斗！为了自己和家人一定要努力奋斗！把不好的一切全部留在这里！感谢这个垃圾场！😁"
   imageUrl = "/img/homeimage.jpg"
-  imageTitle = "homeimage"
-  imageWidth = 120
+  imageTitle = ""  #图片信息不显示
+  imageWidth = 120   #在主页正中间显示的圆形图像
   imageHeight = 120
 
 [[params.profileMode.buttons]]
