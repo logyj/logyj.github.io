@@ -15,6 +15,10 @@ jobs:
     - name: Install GitHub CLI and jq
       run: sudo apt-get update && sudo apt-get install -y gh jq
 
+    - name: Authenticate GitHub CLI
+      run: |
+        echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
+
     - name: List workflow runs
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -31,7 +35,7 @@ jobs:
         cat runs.json | jq -c '.[] | select(.created_at | fromdateiso8601 < (now - 7*24*60*60))' | while read -r run; do
           id=$(echo $run | jq -r '.id')
           created_at=$(echo $run | jq -r '.created_at')
-          echo "Deleting run $id created at $created_at"
-          gh api -X DELETE /repos/${{ github.repository }}/actions/runs/$id -H "Authorization: token $GITHUB_TOKEN"
+          echo "Attempting to delete run $id created at $created_at"
+          delete_response=$(gh api -X DELETE /repos/${{ github.repository }}/actions/runs/$id -H "Authorization: token $GITHUB_TOKEN" 2>&1)
+          echo "Response: $delete_response"
         done
-
