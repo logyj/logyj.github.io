@@ -12,16 +12,26 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Install GitHub CLI
-      run: sudo apt-get install gh jq -y
+    - name: Install GitHub CLI and jq
+      run: sudo apt-get update && sudo apt-get install -y gh jq
 
-    - name: Run cleanup script
+    - name: List workflow runs
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        gh api -X GET /repos/${{ github.repository }}/actions/runs --paginate -q '.workflow_runs[] | select(.conclusion != null) | {id: .id, created_at: .created_at}' > runs.json
+        echo "Fetching workflow runs..."
+        gh api -X GET /repos/${{ github.repository }}/actions/runs --paginate -q '.workflow_runs[] | {id: .id, created_at: .created_at}' > runs.json
+        cat runs.json
+
+    - name: Filter and delete old runs
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        echo "Filtering and deleting old runs..."
         cat runs.json | jq -c '.[] | select(.created_at | fromdateiso8601 < (now - 7*24*60*60))' | while read -r run; do
           id=$(echo $run | jq -r '.id')
-          echo "Deleting run $id"
+          created_at=$(echo $run | jq -r '.created_at')
+          echo "Deleting run $id created at $created_at"
           gh api -X DELETE /repos/${{ github.repository }}/actions/runs/$id -H "Authorization: token $GITHUB_TOKEN"
         done
+
