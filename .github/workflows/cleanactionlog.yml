@@ -27,6 +27,9 @@ jobs:
         gh api -X GET /repos/${{ github.repository }}/actions/runs --paginate -q '.workflow_runs[] | {id: .id, created_at: .created_at}' > runs.json
         cat runs.json
 
+    - name: Check runs.json content
+      run: cat runs.json
+
     - name: Filter and delete old runs
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
