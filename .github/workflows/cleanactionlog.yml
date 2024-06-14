@@ -1,0 +1,27 @@
+name: Cleanup old workflow runs
+
+on:
+  schedule:
+    - cron: '0 22 * * 3'
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install GitHub CLI
+      run: sudo apt-get install gh -y
+
+    - name: Run cleanup script
+      run: |
+        gh auth login --with-token ${{ secrets.GITHUB_TOKEN }}
+        gh api -X GET /repos/${{ github.repository }}/actions/runs --paginate -q '.workflow_runs[] | select(.conclusion != null) | {id: .id, created_at: .created_at}' > runs.json
+        jq -c '.[] | select(.created_at | fromdateiso8601 < (now - 7*24*60*60))' runs.json | while read -r run; do
+          id=$(echo $run | jq -r '.id')
+          echo "Deleting run $id"
+          gh api -X DELETE /repos/${{ github.repository }}/actions/runs/$id
+        done
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
