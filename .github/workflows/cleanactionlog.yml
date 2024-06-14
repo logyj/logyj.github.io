@@ -2,7 +2,8 @@ name: Cleanup old workflow runs
 
 on:
   schedule:
-    - cron: '0 22 * * 3'
+    - cron: '0 16 * * 1' # 每周一下午4点（UTC时间）运行
+  workflow_dispatch: # 手动触发事件
 
 jobs:
   cleanup:
